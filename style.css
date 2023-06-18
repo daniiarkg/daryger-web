@@ -1,0 +1,681 @@
+@media (min-width:600px) { /* -----------------------------------------регистрация------------------------------------------------ */
+ body {
+    /* text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Roboto"),
+             local("Roboto-Regular"),
+             url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2)
+             format("woff2");
+        unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+}
+/* использую грид, чтобы разместить по центру */
+.row {
+    display: grid;
+    justify-content: center;
+}
+/* исп грид, чтобы разместить по центрру и поставить заголовок и ссылки в одну строчку с помощью grid area */
+.header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:"link1 h1 link2"; 
+}
+.link1 {
+    grid-area: link1;
+    color: gray;
+}
+.link2 {
+    grid-area: link2;
+    color: #5db075;
+}
+h1 {
+    grid-area: h1;
+}
+.header a {
+    margin: 0 20px 0 20px;
+    display: block;
+}
+/* размещаю по центру и ввиде колонки с помощью флекс */
+.register {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 500px;
+    margin: 0 0 30px 0;
+}
+/* стилизация полей ввода */
+.register input {
+    margin: 0 0 30px 0;
+    padding: 20px 0 0 20px;
+    border: 1px gray solid;
+    background-color: rgb(255, 247, 247);
+    border-radius: 5px;
+    font-size: large;
+	padding: 10px;
+	margin-bottom: 20px;
+	/* //margin-left: 40%; */
+	height: 15px; 
+}
+/* пытался через псевдоэлементы надпись показать поставить надпись "показать"в поле пароля */
+.pass {
+    position: relative;
+    display: grid;
+}
+.pass::after {
+    content: "Показать";
+    position: absolute;
+    top:7px;
+    left:400px;
+    color: #5db075;
+}
+.btns a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+.agree {
+    background-color: #5db075;
+    padding: 10px 0px;
+    border-radius: 20px;
+    color: white;
+}
+/* ----------------------------------------КАБИНЕТ--------------------------------------------------- */
+/* делаю то же самое, что и в прошлой шапке */
+.header2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:"link1 h1 link2"; 
+    background-color: #5db075;
+    color: white;
+}
+.link3 {
+    grid-area: link1;
+    
+}
+.link4 {
+    grid-area: link2;
+   
+}
+h1 {
+    grid-area: h1;
+}
+.header2 a {
+    margin: 0 20px 0 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.avatar {
+   display: grid;
+   grid-column: 2;
+   justify-content: center;
+   padding: 30px;
+}
+.header2 img {
+    display: block;
+}
+.info {
+    text-align: center;
+}
+/* пытался поставить гшотовый код тумблера. он вроде рабочий, но html не настроен */
+/* #button-7 .knobs:before,
+#button-7 .knobs:after,
+#button-7 .knobs span {
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  border-radius: 50%;
+}
+
+#button-7 .knobs:before {
+  content: "YES";
+  left: 4px;
+  color: #fff;
+  opacity: 1;
+}
+
+#button-7 .knobs:after {
+  content: "N";
+  left: 42px;
+  color: #fff;
+  width: 14px;
+  text-align: left;
+  padding: 9px 7px;
+  background-color: #f44336;
+  opacity: 0;
+}
+
+#button-7 .knobs:before,
+#button-7 .knobs:after {
+  transition: 0.3s ease all;
+  z-index: 2;
+}
+
+#button-7 .knobs span {
+  left: 4px;
+  background-color: #03a9f4;
+  transition: 0.2s ease all;
+  z-index: 1;
+}
+
+#button-7 .checkbox:checked + .knobs:before {
+  opacity: 0;
+}
+
+#button-7 .checkbox:checked + .knobs:after {
+  opacity: 1;
+}
+
+#button-7 .checkbox:checked + .knobs span {
+  top: 14px;
+  left: 56px;
+  width: 2px;
+  height: 2px;
+  padding: 3px;
+  background-color: #fff;
+  z-index: 3;
+}
+
+#button-7 .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+} */
+/* --------------------------------------------ВХОД------------------------------------------------- */
+/* тоже, что и в прошлых хедерах */
+.header3 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:"link1 h1"; 
+}
+/*----------------------------------------------- адаптив-------------------------------------------------------------------------------- */
+}
+@media (max-width:600px) {
+body {
+    margin:0;
+}
+    /* использую грид, чтобы разместить по центру */
+.row {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+   
+}
+/* исп грид, чтобы разместить по центрру и поставить заголовок и ссылки в одну строчку с помощью grid area */
+.header {
+    display: grid; 
+    /* width: 300px; */
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:"link1 h1 link2";
+    
+}
+.link1 {
+    grid-area: link1;
+    color: gray;
+}
+.link2 {
+    grid-area: link2;
+    color: green;
+}
+h1 {
+    grid-area: h1;
+}
+.header a {
+    margin: 0 20px 0 20px;
+    display: block;
+}
+.btnreg {
+    width:100%;
+}
+/* размещаю по центру и ввиде колонки с помощью флекс */
+.register {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    /* width:calc(100%-10px); */
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+/* стилизация полей ввода */
+.register input {
+    margin: 0 0 30px 0;
+    padding: 20px 0 0 20px;
+    border: 1px gray solid;
+    background-color: rgb(255, 247, 247);
+    border-radius: 5px;
+    font-size: large;
+	padding: 10px;
+	margin-bottom: 20px;
+	/* //margin-left: 40%; */
+	height: 15px; 
+}
+/* пытался через псевдоэлементы надпись показать поставить надпись "показать"в поле пароля */
+.pass {
+    position: relative;
+    display: grid;
+}
+.pass::after {
+    content: "Показать";
+    position: absolute;
+    top:0;
+    /* left:0; */
+    right:0;
+    margin-top:6px;
+    margin-right:8px;
+    color: green;
+}
+.btns a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 20px 0;
+}
+.agree {
+    background-color: #5db075;
+    padding: 10px 0px;
+    border-radius: 20px;
+    color: white;
+}
+/* ----------------------------------------КАБИНЕТ--------------------------------------------------- */
+/* делаю то же самое, что и в прошлой шапке */
+.header2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:"link1 h1 link2"; 
+    background-color: #5db075;
+    color: white;
+}
+.link3 {
+    grid-area: link1;
+    
+}
+.link4 {
+    grid-area: link2;
+   
+}
+h1 {
+    grid-area: h1;
+}
+.header2 a {
+    margin: 0 20px 0 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.avatar {
+   display: grid;
+   grid-column: 2;
+   justify-content: center;
+   padding: 30px;
+}
+.header2 img {
+    display: block;
+}
+.info {
+    text-align: center;
+}
+}
+input[type="radio"] {
+    display:none;
+}
+.content-block {
+    position:relative;
+    max-height:500px;
+    margin:6px;
+}
+.swith-block {
+    width: 100%;
+    height:30px;
+    display:flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    /* border:1px grey solid; */
+    border-radius: 15px;
+    padding-bottom:10px;
+    
+}
+.Radio {
+    width:50%;
+}
+.photo {
+    width:100%;
+    height:100%;
+}
+#swith-panel {
+    position:absolute;
+    top:0;
+    left:0;
+    margin:1px 0;
+    width:calc(50% - 2px);
+    border-radius:15px;
+    height:30px;
+    background-color:#5db075;
+    z-index:-1;
+    transition: left 1.2s;
+}
+
+.swith-block h3 {
+    margin:3px 0;
+}
+
+.course-form-div {
+    display:none;
+    max-height:400px;
+    margin:8px;
+}
+
+input[id="scales"]:checked ~ #mv {
+    display: block;
+    animation: go 1.2s ease;
+    /* animation: switch-right 1.2s ease; */
+}
+input[id="scales"]:checked ~ #swith-panel {
+    /* animation: switch-left 1.2s ease; */
+    left:0;
+}
+
+input[id="scales1"]:checked ~ #mv1 {
+    display: block;
+    animation: go 1.2s ease;
+    /* animation: switch-right 1.2s ease; */
+}
+
+input[id="scales1"]:checked ~ #swith-panel {
+    /* animation: switch-right 1.2s ease; */
+    left:50%;
+
+}
+
+.download-data,
+.download-data a {
+    
+    border-radius: 16px;
+    height:24px;
+    padding:3px 0;
+    width:140px;
+    background-color: #5db075;
+    color:white;
+    text-decoration: none;
+}
+.download-data a {
+    padding:3px;
+    color:white;
+    text-decoration: none;
+}
+
+/* @keyframes switch-right {
+    0% {
+        left:0;
+    }
+    100% {
+        left:50%;
+    }
+}
+
+@keyframes switch-left {
+    0% {
+        left:50%;
+    }
+    100% {
+        left:0;
+    }
+} */
+
+@keyframes go {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+* {
+    font-family: Inter-Medium;
+}
+
+
+
+
+body {
+    display: flex;  
+    flex-direction: column;
+  /* display: grid; */
+    /* align-content: space-around; */
+    justify-content: space-between;
+    /* width:300px; */
+    min-height: 100vh;
+    margin: 0;
+    /* padding: 0 5px; */
+    /* margin:0 auto; */
+    height: 100%;
+}
+* {
+    font-family: Inter-Medium;
+}
+
+.header {
+    /* display: grid; */
+   
+   /* grid-template-rows: 1;
+   grid-template-areas: "link5 h1"; */
+   padding: 0 5px;
+   display: flex;
+   flex-direction: row;
+   /* padding: 50px; */
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   /* width: 100%; */
+   
+} 
+main {
+    padding: 0 5px;
+    
+}
+.link5 {
+    
+    grid-area: link5;
+    margin: 0 0 0 0;
+    text-decoration: none;
+    color: #5db075;
+    /* justify-self: start; */
+    align-self: center;
+    width:40%;
+}
+.zagolovok {
+    grid-area: h1;
+    width:60%;
+}
+.regist {
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    margin: 0 auto;
+    width: 300px;
+}
+.regist input  {
+    /* justify-content: center;
+    justify-items: center; */
+    margin: 0 0 50px 0;
+    border-radius: 15px;
+    padding: 7px 0 7px 10px;
+    border: 0.1px ;
+    background-color: rgb(240, 234, 234);
+    color: gray;
+}
+
+ul {
+    width:300px;
+    padding:0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 17% 1fr;
+    grid-template-rows: 90px;
+    margin: 0 0 40px 0;
+    grid-template-areas: 'image tablices';
+}
+.tablices {
+    grid-area: tablices;
+}
+.tablica1 {
+    display: grid;
+    grid-template-columns: 130px 110px;
+    margin: 0 ;
+    
+    /* grid-template-columns: 100px ; */
+    /* grid-template-rows:  100px 100px; */ 
+}
+.tablica2 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 130px 110px;
+    margin: 0;
+    /* grid-template-columns: 100px; */
+    /* grid-template-rows: 100px 100px;*/ 
+} 
+    
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem */
+    /* grid-template-areas: 'image h2 minute'
+                         'image time butt';   } */
+ h2 {
+    font-size: 17px; 
+    /* grid-row: 1/2;
+    grid-column: 1/2; */
+    margin: 0;
+}
+.image {
+    grid-area: image;
+    border-radius: 11px;
+}
+.time {
+    /* grid-row: 2/3;
+    grid-column: 1/2; */
+    font-size: 14px;
+    margin: 0;
+}
+.minute {
+    justify-self: end;
+    /* grid-row: 2/3;
+    grid-column: 1/2; */
+    font-size: 12px;
+    margin: 0 0 0 10px;
+    color: gray;
+}
+.butt {
+    /* grid-row: 2/3;
+    grid-column: 2/3; */
+    margin: 0;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 7px 3px;
+    background-color: #5db075;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+} 
+footer {
+    /* display: flex; */
+    /* align-self: flex-end; */
+    /* position:absolute;
+    bottom:0; */
+    /* width: 100%; */
+    /* display: block; */
+    background-color: #5db075;
+    /* right:0;
+    left:0; */
+    padding: 15px 0;
+    
+}
+
+.circle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.circle a {
+    display:inline-block;
+    background-color: white;
+    border-radius: 13px;
+    height: 26px;
+    width: 26px;
+    /* margin:1px 0; */
+    /* margin: 0 0 0 10px; */
+    /* margin: -3px 25px 0 0; */
+    
+}
+.circle img {
+    margin:3px;
+}
+/* ---------------------------------------------------------------index5---------------------------- */
+.razvertka {
+    display: grid;
+    justify-content: center;
+    width:300px;
+    margin: 0;
+    padding: 0 5px;
+    grid-template: 1fr minmax(100px, auto) / 1fr;
+    
+}
+.razvertka p {
+    text-align: center;
+   
+}
+.knopka {
+    display: flex;
+    flex-direction: row;
+     background-color: gray;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin: 0 0 20px 0 ;
+    justify-content: center;
+}
+.plus {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.knopka h2 {
+   margin: 0 10px 0 0;
+
+}
+
+.shit {
+    display:none;
+}
+
+input[id="#huichek"]:checked ~ #huinya {
+    display:block;
+}
